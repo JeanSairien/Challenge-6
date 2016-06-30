@@ -7,3 +7,7 @@ function compteur(){
 	score = point;
 	document.getElementById("point").innerHTML=score;
 };
+
+function multiplicateur(){
+	
+}
