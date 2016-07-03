@@ -2,13 +2,25 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Goku clicker</title>
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/script.js" type="text/javascript"></script>
+	
+
 </head>
 <body>
-<button id="Leclick" onclick="clic()">Clic-moi</button>
-<button id="multiplicateur" onclick="acheterMulti()">Multiplicateur x1</button>
-<div id="score"></div>
+	<h1>Bienvenue sur le Goku clicker!!</h1>
+		
+	<div class="Goku">
+		<h3>Clique ici!</h3>
+		<img src="Goku.jpg" id="Leclick" onclick="clic()" class="target"/>
+	</div>
+
+	<div class="multi">
+		<h3 id="affiche">Senzu x1 (prix du prochain : 50)</h3>
+		<img src="senzu.jpg" id="multiplicateur" onclick="acheterMulti()"/>
+	</div>
+
+	<div id="score"></div>
 </body>
 </html>

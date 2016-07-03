@@ -3,20 +3,42 @@ html {
 	background-color: #EEE8AA;
 }
 
-img {
-	width: 350px;
-	height: 350px;
-	margin-left: 35%;
+h1 {
+	text-align: center;
+}
+
+.Goku {
+	display: inline-block;
+}
+
+.Goku img {
+	width: 450px;
+	height: 450px;
+	margin-left: 25%;
 	margin-top: 50px;
 	border-radius: 50%;
 }
 
-h2 {
-	margin-left: 43%;
-	font-size: 50px;
+.Goku h3 {
+	position: absolute;
+	top: 80px;
+	left: 330px;
 }
 
-p {
-	margin-left: 47.5%;
+.multi {
+	display: inline-block;
+	float: right;
+	padding-right: 200px;
+	padding-top: 100px;
+}
+
+.multi img {
+	border-radius: 50%;
+	height: 200px;
+	width: 200px;
+}
+
+#score {
+	padding-left: 700px;
 	font-size: 40px;
 }

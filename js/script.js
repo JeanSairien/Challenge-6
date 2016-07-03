@@ -6,7 +6,7 @@ function afficherScore() {
 }
 
 function afficherMulti() {
-  document.getElementById("multiplicateur").innerHTML = "Multiplicateur x" + Multiplicateur + " (prix du prochain : " + prix() + ")";
+  document.getElementById("affiche").innerHTML = "Senzu x" + Multiplicateur + " (prix du prochain : " + prix() + ")";
   
 }
 
@@ -16,7 +16,7 @@ function clic() {
 }
 
 function prix() {
-  return 15 * Multiplicateur * Multiplicateur;
+  return 50 * Multiplicateur * Multiplicateur;
 }
 
 function acheterMulti() {
@@ -29,4 +29,5 @@ function acheterMulti() {
     alert("Cliquez plus !!");
   }
 }
+
 
