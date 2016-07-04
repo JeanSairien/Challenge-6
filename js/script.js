@@ -1,65 +1,68 @@
-/*JS pour cookie click*/
-// 	var point =0;
-// 	var score;
-
-// function compteur(){
-// 	point +=1;
-// 	score = point;
-// 	document.getElementById("point").innerHTML=score;
-// };
-
-// function multiplicateur(){
-	
-// }
-
 
 	/* Variables déclarées */
-
-var click = 0;
 var score = 0;
-var super_click = 0;
-var cout_super_click = 0;
-	
+var achat = 0;
+var cout = 0;
+var cout_autoclick = 0;
+incrementeSuperClick();	/*J'appel à nouveau ma fonction imcrementeSuperClick qui donnera sa valeur à la variable achat*/
+incrementeAutoclick();
 
 function compteur(){
-	score +=1+super_click;
+	score +=1+achat;
 	document.getElementById("point").innerHTML=score;
-	console.log(compteur);
-
+	console.log("Score : "+score);
 }
 
-	/* Fonction superclick  */
+	/* Coût du multiplicateur */
+ function incrementeSuperClick(){
+ 		cout+=50;
+ 		console.log("Multiplicateur a un nouveau cout de : "+cout);
+ 		return cout;
+ }
 
+ /* Coût du multiplicateur */
+ function incrementeAutoclick(){
+ 		cout_autoclick+=10;
+ 		console.log("Autoclick a un nouveau cout de : "+cout_autoclick);
+ 		return cout_autoclick;
+ }
 
-function superclick(){
-
-		cout_super_click+=50;
-	if(score >= cout_super_click){
-		super_click+=2;
-		score-=cout_super_click;
-		document.getElementById("point").innerHTML=score;
-		document.getElementById("da").disabled = true;
-		console.log(cout_super_click);
-		console.log(super_click);
+ 	/* Achat de multiplicateur */
+function achat_multiplicateur(){
+	if(score >= cout){
+		achat+=2;
+		score = score-cout;
+		/*Je rappel la fonction d'incrementeSuperClick pour que la boucle
+		 puisse prendre en compte la nouvelle valeur de cout*/
+		incrementeSuperClick();
+		/*Fin*/
+		document.getElementById("point").innerHTML = score;
+		console.log(cout);
+		console.log(achat);
 	}
+
 	else{
-		document.getElementById("da").disabled = false;
-		// 
-		console.log(cout_super_click);
-		console.log(super_click);
+		console.log(cout);
+		console.log(achat);
 	}
 }
 
-function disable(){
-	if(score >= cout_super_click){
-		document.getElementById("da").disabled = false;
-}
-else{
-		document.getElementById("da").disabled = false;
-	}
-}
+	/* Achat de Auto_click */
+ function auto_click(){
+ 	
+ 	if(score >= cout_autoclick){
+ 		var myVar;
+ 		var ratio_autoclick= 0;
+ 		ratio_autoclick += 10;
+ 		myVar= setInterval(function(){ compteur(); }, 2000+ratio_autoclick);
+ 		ratio_autoclick = 10;
+ 		score-=cout_autoclick;
+ 		incrementeAutoclick();
 
-	/* Fonction superclick  */
-// function auto_click(){
-
-// }
+ 		console.log("Autoclick à une valeur de:"+cout_autoclick);
+ 		console.log("Autoclick à un ratio de:"+ratio_autoclick);
+ 	}
+ 	else{
+ 		console.log("Autoclick à une valeur de:"+cout_autoclick);
+ 	}
+ }
