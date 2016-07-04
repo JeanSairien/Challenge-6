@@ -6,7 +6,7 @@ function afficherScore() {
 }
 
 function afficherMulti() {
-  document.getElementById("affiche").innerHTML = "Senzu x" + Multiplicateur + " (prix du prochain : " + prix() + ")";
+  document.getElementById("affiche").innerHTML = "Senzu X" + Multiplicateur + " (prix du prochain : " + prix() + ")";
   
 }
 

@@ -17,6 +17,7 @@ h1 {
 	margin-left: 25%;
 	margin-top: 50px;
 	border-radius: 50%;
+	cursor: pointer;
 }
 
 .Goku h3 {
@@ -36,6 +37,7 @@ h1 {
 	border-radius: 50%;
 	height: 200px;
 	width: 200px;
+	cursor: pointer;
 }
 
 #score {
