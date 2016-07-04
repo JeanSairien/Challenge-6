@@ -6,11 +6,11 @@ function afficherScore() {
 }
 
 function afficherMulti() {
-  document.getElementById("affiche").innerHTML = "Senzu X" + Multiplicateur + " (prix du prochain : " + prix() + ")";
+  document.getElementById("affiche").innerHTML = "Senzu X" + Multiplicateur + " (Prochain senzu: " + prix() + ")";
   
 }
 
-function clic() {
+function compteur() {
   score = score + Multiplicateur;
   afficherScore();
 }
