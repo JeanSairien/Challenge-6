@@ -1,1 +1,46 @@
 /*CSS pour cookie click*/
+html {
+	background-color: #EEE8AA;
+}
+
+h1 {
+	text-align: center;
+}
+
+.Goku {
+	display: inline-block;
+}
+
+.Goku img {
+	width: 450px;
+	height: 450px;
+	margin-left: 25%;
+	margin-top: 50px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.Goku h3 {
+	position: absolute;
+	top: 80px;
+	left: 330px;
+}
+
+.multi,.autoclick {
+	display: inline-block;
+	float: right;
+	padding-right: 200px;
+	padding-top: 100px;
+}
+
+.multi img, .autoclick img {
+	border-radius: 50%;
+	height: 200px;
+	width: 200px;
+	cursor: pointer;
+}
+
+#score {
+	padding-left: 700px;
+	font-size: 40px;
+}
