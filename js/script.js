@@ -36,7 +36,7 @@ function acheterMulti() {
 }
  /* Coût du multiplicateur */
  function incrementeAutoclick(){
- 		cout_autoclick+=2;
+ 		cout_autoclick+=100;
  		console.log("Autoclick a un nouveau cout de : "+cout_autoclick);
  		return cout_autoclick;
  		console.log("ratio_autoclick");
